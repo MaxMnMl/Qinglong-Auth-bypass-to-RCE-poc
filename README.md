@@ -33,10 +33,6 @@ app.use(config.api.prefix, routes());
 
 Even if auth checks reject only lowercase patterns, Express can still resolve `/API/...` to the same handler family as `/api/...` (default case-insensitive behavior), creating an auth bypass.
 
-### Practical effect
-An attacker can bypass token verification and call protected backend APIs directly.  
-Since Qinglong exposes multiple high-impact API actions, this can be chained to command execution via command-run endpoints.
-
 ## Affected Versions
 - Affected versions: **Prior to 2.20.1**
 - Fixed version: **Pending**

